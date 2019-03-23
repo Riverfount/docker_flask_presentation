@@ -1,2 +1,3 @@
-# docker_flask_presentation
-This repo is to mantain my GitPitch presentation about Dockerize Flask Application
+# PyRO - Comunidade Python em Rondônia
+
+Este repositório contém as apresentações que realizei nos encntros da Comunidade Python em Rondônia - PyRO.
