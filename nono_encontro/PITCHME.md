@@ -167,11 +167,11 @@ views.py
 ---?image=template/img/python-logo.svg&position=top right&size=25% auto&color=linear-gradient(to right, #306988, #ffda4b)
 @title[Application Factory e Blueprints]
 
-@snap[north span-70]
+@snap[north span-65]
 @box[bg-blue text-white](Proposta de Solução#Application Factory e Blueprints)
 @snapend
 
-@snap[west span-40]
+@snap[west span-49]
 @box[bg-blue text-white fragment](Application Factory#É um padrão no qual passamos a app para cada extenção ou blueprint para que esta seja configurada)
 @snapend
 
@@ -179,7 +179,7 @@ views.py
 ![Factory](template/img/FactoryMethodPattern.jpg)
 @snapend
 
-@snap[east span-40]
+@snap[east span-49]
 @box[bg-blue text-white fragment](Blueprints#É um conceito utilizado para dividir uma aplicação grande num conjunto de aplicações menores.)
 @snapend
 
@@ -213,40 +213,8 @@ views.py
 @[2,3,10]
 @[4-9]
 @[11]
-@[12]
-@[13]
+@[12-13]
 @[14]
-
-+++?image=template/img/python-logo.svg&position=top right&size=25% auto&color=#002b36
-
-@title[O app.py]
-@snap[north]
-@color[white](O app.py)
-@snapend
-
-```python
-from flask import Flask
-
-
-def create_app():
-    app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'My_Top_Secert_Key'
-
-    # Blueprint
-
-    from backend.blueprints.core import bp as bp_core #noqa
-    bp_core.config(app)
-
-    return app
-    
-```
-@[1]
-@[4]
-@[5]
-@[6]
-@[10]
-@[11]
-@[13]
 
 +++?image=template/img/python-logo.svg&position=top right&size=25% auto&color=#002b36
 
@@ -292,6 +260,39 @@ def home():
 @[4]
 @[5]
 @[6]
+
+
++++?image=template/img/python-logo.svg&position=top right&size=25% auto&color=#002b36
+
+@title[O app.py]
+@snap[north]
+@color[white](O app.py)
+@snapend
+
+```python
+from flask import Flask
+
+
+def create_app():
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'My_Top_Secert_Key'
+
+    # Blueprint
+
+    from backend.blueprints.core import bp as bp_core #noqa
+    bp_core.config(app)
+
+    return app
+    
+```
+@[1]
+@[4]
+@[5]
+@[6]
+@[10]
+@[11]
+@[13]
+
 
 +++?image=template/img/python-logo.svg&position=top right&size=25% auto&color=linear-gradient(to right, #306988, #ffda4b)
 @title[Conclusão Arquitetura]
